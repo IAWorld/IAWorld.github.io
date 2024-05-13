@@ -40,7 +40,7 @@ body {
     overflow-x: hidden;
     overflow-y: auto;
 }
-
+/*似乎是定义了不同级别标题的字体大小、粗细、行高和上下边距。Claude说的*/
 h1 {
     margin: 48px 0 22px -5px;
     font-size: 2.0rem;
@@ -116,7 +116,7 @@ pre {
     top: 0;
     left: 12px;
     margin-top: 12px;
-    -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+    -webkit-box-shadow: 20px 0 #ffcb2e, 40px 0 #27c93f;/*试了一下，这两个都不是滚动播放的那个图片的颜色*/
     box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
 }
 
@@ -202,7 +202,7 @@ kbd {
     line-height: 1.8rem;
     white-space: nowrap;
 }
-
+/*b、strong定义加粗文本的样式。//dfn定义斜体文本的样式。//small定义小号文本的样式。//cite定义引用文本的样式。//mark定义高亮文本的样式。//.card定义卡片元素的样式,包括圆角和阴影。//.card .card-image img定义卡片图像的样式,包括圆角和图像填充方式。//.container .row定义容器内行元素的样式,包括底部外边距。//.bg-color定义背景渐变色。//.text-color定义文本颜色。//.white-color定义白色文本颜色。//.progress-bar定义页面底部进度条的样式,包括高度、位置和渐变背景色。//.sidenav-overlay定义侧边栏遮罩层的 z-index。//.pd-header定义页头的上边距。//问Claude的*/
 b,
 strong {
     font-weight: bold;
@@ -224,7 +224,7 @@ mark {
     background-color: #fcf8e3;
     padding: .2em;
 }
-
+/*card似乎是首页的文章卡片*/
 .card {
     border-radius: 10px;
     box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07) !important;
@@ -239,7 +239,7 @@ mark {
 .container .row {
     margin-bottom: 0;
 }
-
+/*这段 CSS 代码定义了一个名为 .bg-color 的类,它设置了一个从左到右的线性渐变背景。*/
 .bg-color {
     background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
 }
@@ -268,7 +268,7 @@ mark {
 .pd-header {
     margin-top: -64px;
 }
-
+/*header应该就是最上面一堆写着首页、标签、分类、归档、关于之类的栏目了*/
 header .side-nav {
     width: 240px;
     z-index: 999;
@@ -278,7 +278,7 @@ header .side-nav {
 nav {
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 7px 10px 0 rgba(0, 0, 0, 0.12);
 }
-
+/*这段代码的作用是让带有 .nav-transparent 类的导航元素具有完全透明的背景,没有背景图像和阴影效果。这种样式通常用于创建一个透明的导航栏,以便在页面上实现一些特殊的视觉效果,比如让导航栏与页面内容融为一体。*/
 header .nav-transparent {
     background-color: transparent !important;
     background-image: none;
@@ -550,11 +550,11 @@ header .go-back i {
     height: 40vh !important;
 }
 
-.bg-cover:after {
+/*.bg-cover:after {
     -webkit-animation: rainbow 60s infinite;
     animation: rainbow 60s infinite;
-}
-
+}*/  /*这个是我去掉的，为了不让封面变色，单独去掉上面就可以，不过下面这一块去掉了，似乎也没有任何影响*/
+/*
 .bg-cover:before,
 .bg-cover:after {
     position: absolute;
@@ -565,11 +565,11 @@ header .go-back i {
     left: 0;
     top: 0;
     content: "";
-}
+}*/
 
 .bg-cover .container {
     position: relative;
-    color: #fff;
+    color: #86856e;/*#fff;*//*副标题——人若不为形所累的颜色*/
     z-index: 2;
 }
 
@@ -584,7 +584,7 @@ header .go-back i {
     font-weight: 300;
     font-size: 1.25rem;
     line-height: 1.4em;
-    color: #eee;
+    color: #86856e;/*#eee;*/ /*副标题的副标题的颜色，就是那个能播放的标题*/
 }
 
 .bg-cover .post-title {
@@ -593,6 +593,10 @@ header .go-back i {
     font-weight: 400;
 }
 
+/*
+@-webkit-keyframes rainbow 和 @keyframes rainbow 之间的主要区别在于:浏览器兼容性:@-webkit-keyframes 是针对 WebKit 内核的浏览器(如 Chrome、Safari)使用的前缀。@keyframes 是标准的 CSS 语法,适用于所有现代浏览器。使用场景:在较老的浏览器中,需要使用 -webkit- 前缀来确保动画效果正常显示。在较新的浏览器中,可以直接使用标准的 @keyframes 语法,无需使用前缀。代码重复:为了确保动画在所有浏览器上都能正常工作,通常需要同时定义 -webkit- 前缀和标准的 @keyframes 规则。这会导致代码重复。总的来说,@-webkit-keyframes rainbow 是为了兼容 WebKit 内核的浏览器,而 @keyframes rainbow 是标准的 CSS 语法,适用于所有现代浏览器。在编写 CSS 动画时,最好同时定义这两种规则,以确保动画在所有浏览器上都能正常显示。随着时间的推移,使用 -webkit- 前缀的需求会逐渐减少,因为现代浏览器已经广泛支持标准的 @keyframes 语法。
+注意这个.bg-cover:after {...}
+*//*
 @-webkit-keyframes rainbow {
 
     0%,
@@ -683,7 +687,7 @@ header .go-back i {
         background: -moz-linear-gradient(135deg, rgba(233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
         background: -webkit-linear-gradient(135deg, rgba(2233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
     }
-}
+}*/
 
 .index-card {
     margin-top: -10px;
@@ -1335,7 +1339,7 @@ thead {
     color: #fff;
 }
 
-/* archive page. */
+/* archive page. 归档页面，timeline即时间线*/
 #cd-timeline .year {
     position: relative;
     width: 80px;
@@ -1468,8 +1472,12 @@ thead {
         left: 50%;
         margin-left: -20px;
         /* Force Hardware Acceleration in WebKit */
-        -webkit-transform: translateZ(0);
+        /*-webkit-transform: translateZ(0);
+        -webkit-backface-visibility: hidden;*/
+        backface-visibility: hidden;/*供应商前缀，现在大多数现代浏览器已经不需要使用供应商前缀了,所以如果你的目标用户群都使用的是现代浏览器,可以考虑只使用标准属性而不需要添加供应商前缀。*/
         -webkit-backface-visibility: hidden;
+        transform: translateX(-50%);/*供应商前缀，现在大多数现代浏览器已经不需要使用供应商前缀了,所以如果你的目标用户群都使用的是现代浏览器,可以考虑只使用标准属性而不需要添加供应商前缀。*/
+        -webkit-transform: translateX(-50%);
     }
 
     .cssanimations .cd-timeline-img.is-hidden {
