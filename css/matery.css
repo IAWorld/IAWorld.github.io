@@ -569,7 +569,7 @@ header .go-back i {
 
 .bg-cover .container {
     position: relative;
-    color: #86856e;/*#fff;*//*副标题——人若不为形所累的颜色*/
+    color: #24241d;/*#fff;*//*副标题——人若不为形所累的颜色*/
     z-index: 2;
 }
 
@@ -584,7 +584,7 @@ header .go-back i {
     font-weight: 300;
     font-size: 1.25rem;
     line-height: 1.4em;
-    color: #86856e;/*#eee;*/ /*副标题的副标题的颜色，就是那个能播放的标题*/
+    color: #24241d;/*#eee;*/ /*副标题的副标题的颜色，就是那个能播放的标题*/
 }
 
 .bg-cover .post-title {
